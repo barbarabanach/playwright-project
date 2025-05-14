@@ -1,14 +1,10 @@
 import { test, expect } from '@playwright/test';
 
-test('Hotel search with valid input @TC001', async ({ page }) => {
-  await page.goto('https://www.trivago.com');
+test('has title', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
 
   // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/trivago - Compare hotel prices worldwide/);
-
-  
-
-
+  await expect(page).toHaveTitle(/Playwright/);
 });
 
 test('get started link', async ({ page }) => {
