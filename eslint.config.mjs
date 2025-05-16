@@ -1,6 +1,7 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default [
   { ignores: ['package-lock.json', 'playwright-report/**', 'test-results/**'] },
@@ -25,4 +26,5 @@ export default [
       '@typescript-eslint/explicit-function-return-type': 'error',
     },
   },
+  eslintPluginPrettierRecommended,
 ];
